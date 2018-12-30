@@ -1,10 +1,10 @@
-# Python Bottle application
+# Python Bottle Application
 
 
 ## Heroku address for live demo
 
 `
-http://...
+https://gursel.herokuapp.com/
 `
 
 ## Local run 
@@ -13,7 +13,7 @@ http://...
 python3 bottle_app.py
 `
 
-## Web Site Password
+## Web site comment password
 
 `
 1415
