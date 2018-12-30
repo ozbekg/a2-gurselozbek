@@ -25,7 +25,7 @@ comments = []
 hash_pw = "0c86f2dfd04b5d52de85408b658cd99e053d9010b38c56da20673c9a891e9746"
 
 def html_index():
-	#cmnts= html_comments()
+	cmnts= html_comments()
 	content = """
 <!doctype html>
 <html>
@@ -98,7 +98,7 @@ def html_index():
             </div>
         </section>
     </body>
-</html>""" %(html_comments())
+</html>""" %(cmnts)
 	return content
 
 def html_cast():
@@ -420,7 +420,7 @@ def formhandler():
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
     dic = {"comment":comment,"time":st} 
     if hash_pw == password:
-    	comments.insert(0,dic)
+    	comments.append(dic)
     return html_index()
 
 
