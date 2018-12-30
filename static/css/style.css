@@ -190,6 +190,10 @@ input[type=submit]:hover {
 .fa-comment{
     margin-right: 10px;
 }
+.timestamp{
+    float: right;
+    padding: 15px;
+}
 
 /* CAST */
 
