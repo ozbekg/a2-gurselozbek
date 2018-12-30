@@ -11,6 +11,9 @@ global first
 global last 
 global comments
 from bottle import static_file
+
+import datetime
+import time
 @route('/static/<filepath:path>')
 def server_static(filepath):
     return static_file(filepath, root='static/')
@@ -22,7 +25,7 @@ comments = []
 hash_pw = "0c86f2dfd04b5d52de85408b658cd99e053d9010b38c56da20673c9a891e9746"
 
 def html_index():
-	cmnts= html_comments()
+	#cmnts= html_comments()
 	content = """
 <!doctype html>
 <html>
@@ -95,7 +98,7 @@ def html_index():
             </div>
         </section>
     </body>
-</html>""" %(cmnts)
+</html>""" %(html_comments())
 	return content
 
 def html_cast():
@@ -383,7 +386,7 @@ def html_comments():
 	global comments
 	text = '<ul>'
 	for i in range(0,len(comments)):
-		text += '<li class="comment"><i class="far fa-comment"></i>'+comments[i]+'</li>'
+		text += '<li class="comment"><i class="far fa-comment"></i>'+comments[i]["comment"]+'<span class="timestamp">'+comments[i]["time"]+'</span></li>'
 	text += '</ul>'
 	return text
 
@@ -413,8 +416,11 @@ def formhandler():
     password = request.forms.get('password')
     password = create_hash(password)
     global comments
+    ts = time.time()
+    st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+    dic = {"comment":comment,"time":st} 
     if hash_pw == password:
-    	comments.append(comment)
+    	comments.insert(0,dic)
     return html_index()
 
 
