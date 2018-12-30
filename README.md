@@ -3,9 +3,9 @@
 
 ## Heroku address for live demo
 
-`
-<https://gursel.herokuapp.com/>
-`
+
+https://gursel.herokuapp.com/
+
 
 ## Local run 
 
