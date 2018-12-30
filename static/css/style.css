@@ -1,0 +1,277 @@
+
+*,html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Mono', monospace;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.reference{
+    display: block;
+    padding: 10px 8px;
+    text-decoration: none;
+    color:#000;
+
+}
+
+/* INDEX*/
+
+/* Header*/
+
+header .container{
+    background-color: #026635;
+    height: 200px;
+    display: flex;
+}
+header .logo{
+    margin-right: auto;
+}
+header .logo img{
+    display:block;
+    height: 200px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*background-color: #333;*/
+}
+
+.nav li {
+    float:left;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.nav li a {
+    display: block;
+    padding: 0px 15px;
+    line-height: 182px;
+    color: #4cd137;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 30px;
+    transition: all .5s ease;
+    border-top: 10px solid #026635;
+    border-bottom: 10px solid #026635;
+    border-radius: 3px;
+
+}
+
+.active{
+    border-top: 10px solid #ffeaa7 !important;
+    border-bottom: 10px solid #ffeaa7 !important;
+}
+
+.nav li:hover a{
+    color: #ffeaa7;
+}
+
+
+/*Content*/
+
+.content .container{
+    display: block;
+    background-color: #026635;
+    color:#fff;
+}
+
+
+h3{
+    font-size: 48px;
+    margin: 30px auto ;
+    color: #ffeaa7;
+}
+
+p{
+    margin: 20px auto;
+    border-left: 15px solid #ffeaa7;
+    padding-left: 15px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.half{
+    width:50%;
+    margin: 0 auto;
+}
+
+
+/* Caption */
+.shadow{
+    width: 50%;
+    margin: 25px auto;
+    border:0 !important;
+    padding: 15px;
+    -webkit-box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.8)
+}
+
+.caption{
+    height:100vh;
+    background: url("/static/img/caption.jpg") center center no-repeat;
+    background-size: cover;
+    width:90%;
+    margin: 0 auto;
+}
+
+.caption .container{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*Comment*/
+
+form{
+    text-align: center;
+}
+textarea {
+  display: block;
+  width: 80%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  margin: 15px auto;
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=password]{
+    left: 10%;
+  display: inline-block;
+  width: 20%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  margin: 15px auto;
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  display: inline-block;  
+  background-color: #ffeaa7;
+  color: #026635;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.comment {
+  display: block;
+  width: 80%; 
+  resize: vertical;
+  padding: 0.75rem 1.25rem;
+  margin: 15px auto;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+.fa-comment{
+    margin-right: 10px;
+}
+
+/* CAST */
+
+#cast #content{
+    margin-top: 35px;
+    position: relative;
+    display: grid;
+    justify-content: center;
+
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "A B 1"
+        "2 E F"
+        "G H 3"
+        "4 I J"
+        "K L 5"
+        "6 M N"
+        "O P 7"
+        "8 R S";
+    grid-row-gap: 80px;
+}
+#cast #content:before{
+    content: " ";
+    width: 5px;
+    background-color: #026635;
+    position: absolute;
+    top:0;
+    bottom: 100px;
+    left:50%;
+    margin-left: 2.5px;
+    z-index: -1;
+}
+
+#cast #content .info{
+    padding: 100px 0;
+    line-height: 32px;
+}
+
+h4{
+    font-size: 24px;
+    color: #026635;
+
+}
+
+h5{
+    font-style: italic;
+    font-size: 16px;
+    color: #4cd137;
+}
+
+.croppedImg{
+    display: block;
+    border-radius: 100%;
+    width:250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+
+/* AWARDS */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+#awards{
+    text-align: center;
+}
+#awards img{
+    display: inline-block;
+    width: 800px;
+    margin: 25px 0;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #eee}
+
+th {
+    background-color: #026635;
+    color: white;
+}
