@@ -43,7 +43,7 @@ def html_index():
         <header>
             <div class="container">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img src="/static/img/logo2.png"/> </a>    
                 </div>
                 <div class="nav">
@@ -116,7 +116,7 @@ def html_cast():
         <header>
             <div class="container">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img alt="logo" src="/static/img/logo2.png"/> </a>
                 </div>
                 <div class="nav">
@@ -234,7 +234,7 @@ def html_awards():
 	        <header>
 	            <div class="container">
 	                <div class="logo">
-	                    <a href="index.html">
+	                    <a href="/">
 	                        <img src="/static/img/logo2.png" alt="logo"/> </a>
 	                </div>
 	                <div class="nav">
